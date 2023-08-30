@@ -1,6 +1,8 @@
 import argparse
 import os
 
+from utils import extract_code_blocks, translate_code, replace_code_blocks
+
 def main():
     # Set up the argument parser
     parser = argparse.ArgumentParser(description="Translate code blocks in a markdown file.")
@@ -41,5 +43,6 @@ def main():
     print(f"Translated markdown saved to: {output_path}")
 
 # For now, we'll simulate the CLI call by manually setting the arguments
-args = ["sample.md", "python", "javascript", "--output", "translated_sample.md"]
+# args = ["sample.md", "python", "javascript", "--output", "translated_sample.md"]
+args = ["cpp-cheatsheet1.md", "cpp", "csharp"]
 main()

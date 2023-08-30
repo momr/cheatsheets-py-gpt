@@ -46,3 +46,29 @@ console.log("Hello, World!");
     replaced_content = replace_code_blocks(sample_markdown, ['```python\nprint("Hello, World!")\n```\n'], ['```js\nconsole.log("Hello, World!");\n```\n'])
     print(replaced_content)
     assert replaced_content == translated_markdown
+
+"""
+```cpp
+255, 0377, 0xff             // Integers (decimal, octal, hex)
+2147483647L, 0x7fffffffl    // Long (32-bit) integers
+123.0, 1.23e2               // double (real) numbers
+'a', '\\141', '\\x61'         // Character (literal, octal, hex)
+'\\n', '\\\\', '\\'', '\\"'      // Newline, backslash, single quote, double quote
+"string\\n"                  // Array of characters ending with newline and \\0
+"hello" "world"             // Concatenated strings
+true, false                 // bool constants 1 and 0
+nullptr                     // Pointer type with the address of 0
+```
+"""
+
+"""csharp
+255, 0377, 0xff             // Integers (decimal, octal (not supported in C#), hex)
+int.MaxValue, 0x7fffffff    // Int32 (32-bit) integers
+123.0, 1.23e2               // double (real) numbers
+'a', '\141', '\x61'         // Character (literal, octal, hex)
+'\n', '\\', '\'', '\"'      // Newline, backslash, single quote, double quote
+"string\n"                  // String ending with newline
+"hello" + "world"           // Concatenated strings
+true, false                 // bool constants true and false
+null                        // Null reference for reference types in C#
+"""

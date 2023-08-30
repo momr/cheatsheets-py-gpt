@@ -57,6 +57,8 @@ def replace_code_blocks(markdown_content, original_blocks, translated_blocks):
         str: Markdown content with code blocks replaced by translated ones.
     """
     for orig, trans in zip(original_blocks, translated_blocks):
-        markdown_content = re.sub(re.escape(orig), trans, markdown_content)
+        # orig = orig.replace('\\\\', '\\')
+        markdown_content = re.sub(re.escape(rf"{orig}"), trans, markdown_content)
+        # markdown_content = re.sub((rf"{orig}"), trans, markdown_content)
 
     return markdown_content
