@@ -7,9 +7,10 @@ def extract_code_blocks(filename, language):
         contents = file.read()
         # Regular expression to find code blocks of the specified language
         pattern = re.compile(rf'```{language}\n(.*?)```', re.DOTALL)
-        matches = pattern.findall(contents)
+        non_code_blocks = re.split(r'```{language}.*?```', contents, re.DOTALL)
+        code_blocks = pattern.findall(contents)
         # print_code_block(language, matches)
-        return matches
+        return code_blocks, non_code_blocks
 
 def translate_code(code, from_language, to_language):
     # openai.api_key = 'YOUR_OPENAI_API_KEY'
@@ -40,7 +41,7 @@ if __name__ == "__main__":
     source_language = sys.argv[2]
     target_language = sys.argv[3]
     
-    code_blocks = extract_code_blocks(filename, source_language)
+    code_blocks, _ = extract_code_blocks(filename, source_language)
     
     for code in code_blocks:
         translated_code = translate_code(code, source_language, target_language)
