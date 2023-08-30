@@ -18,7 +18,7 @@ I undertook this experiment early in the morning, dedicating two hours before st
 
 **Code Availability**:
 
-For those interested in the actual code and a deeper dive into the experiment, you can find everything in my GitHub repository. (Remember to insert a link to your repo here: <https://github.com/momr/cheatsheets-py-gpt>)
+For those interested in the actual code and a deeper dive into the experiment, you can find everything in my GitHub repository here: <https://github.com/momr/cheatsheets-py-gpt>
 
 ---
 
