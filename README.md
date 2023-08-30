@@ -1,4 +1,4 @@
-# Harnessing the Power of GPT for Software Development**
+# Harnessing the Power of GPT for Software Development
 
 In the ever-evolving landscape of software development, the tools at our disposal are constantly expanding. Recently, I embarked on an experiment to harness the power of OpenAI's GPT model for a unique software development task. The results? Quite enlightening.
 
